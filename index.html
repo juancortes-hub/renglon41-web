@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporación Renglón 41 | Consultoría Estratégica</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E4036', // Moss
+                        accent: '#CC5833', // Clay
+                        background: '#F2F0E9', // Cream
+                        dark: '#1A1A1A', // Charcoal
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Outfit', 'sans-serif'],
+                        drama: ['Cormorant Garamond', 'serif'],
+                        mono: ['IBM Plex Mono', 'monospace'],
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                        '6xl': '3rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-background text-dark font-sans overflow-x-hidden antialiased selection:bg-accent selection:text-white">
+
+    <!-- Global CSS Noise Overlay -->
+    <svg class="pointer-events-none fixed inset-0 z-50 h-[100vh] w-[100vw] opacity-[0.05]">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+    </svg>
+
+    <!-- Navbar: "The Floating Island" -->
+    <nav id="navbar"
+        class="fixed top-6 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-5xl rounded-full transition-all duration-500 bg-transparent text-white border border-transparent">
+        <div class="px-6 py-4 flex items-center justify-between">
+            <div class="font-sans font-bold text-xl tracking-tight">Renglón 41</div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#proposito" class="nav-link hover:-translate-y-[1px] transition-transform">Propósito</a>
+                <a href="#servicios" class="nav-link hover:-translate-y-[1px] transition-transform">Servicios</a>
+                <a href="#metodo" class="nav-link hover:-translate-y-[1px] transition-transform">Método</a>
+            </div>
+            <a href="#reserva"
+                class="magnetic-btn group relative overflow-hidden rounded-full bg-accent px-6 py-2.5 text-sm font-medium text-white shadow-lg inline-block">
+                <span class="relative z-10 flex items-center gap-2">Agendar Cita <i data-lucide="arrow-right"
+                        class="w-4 h-4"></i></span>
+                <div
+                    class="absolute inset-0 z-0 scale-y-0 bg-primary transition-transform duration-500 ease-in-out group-hover:scale-y-100 origin-bottom">
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section: "The Opening Shot" -->
+    <section class="relative h-[100dvh] w-full overflow-hidden flex items-end">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2627&auto=format&fit=crop"
+                alt="Dark organic texture" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 w-full px-8 pb-32 md:pb-24 max-w-7xl mx-auto">
+            <div class="max-w-4xl hero-content">
+                <p class="hero-text text-accent font-mono text-sm tracking-widest uppercase mb-6">Consultoría en
+                    Estrategia, Innovación y Ambiente</p>
+                <h1 class="text-white leading-[1.1] mb-8">
+                    <span
+                        class="hero-text block font-sans font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight leading-tight">La
+                        estrategia es el</span>
+                    <span
+                        class="hero-text block font-drama italic text-6xl md:text-8xl lg:text-9xl text-accent mt-1">crecimiento.</span>
+                </h1>
+
+                <p class="hero-text text-gray-300 max-w-xl text-lg md:text-xl font-sans mb-10 leading-relaxed">
+                    Convertimos la estrategia y la innovación en resultados reales. Con más de 30 años de experiencia,
+                    generamos soluciones en competitividad y sostenibilidad.
+                </p>
+
+                <div class="hero-text">
+                    <a href="#reserva"
+                        class="magnetic-btn group relative overflow-hidden rounded-full bg-white text-dark px-8 py-4 text-base font-semibold shadow-xl inline-flex items-center gap-3">
+                        <span class="relative z-10 flex items-center gap-2">Explorar Servicios <i data-lucide="compass"
+                                class="w-5 h-5"></i></span>
+                        <div
+                            class="absolute inset-0 z-0 bg-accent scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 origin-left">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section: "Interactive Functional Artifacts" -->
+    <section id="servicios" class="py-32 px-6 md:px-12 bg-background relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="font-sans font-bold text-4xl md:text-6xl text-primary tracking-tight mb-6 mt-16">
+                    Capacidades<br><span
+                        class="font-drama italic text-accent font-normal text-5xl md:text-7xl">funcionales.</span></h2>
+                <p class="text-dark/70 font-sans max-w-2xl text-lg">Nos integramos a su ecosistema empresarial con
+                    metodologías probadas para generar rentabilidad y alineación estratégica.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Diagnostic Shuffler -->
+                <div
+                    class="feature-card bg-white rounded-5xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/5 flex flex-col h-[480px]">
+                    <div class="mb-auto">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-sans font-bold text-2xl text-primary mb-3">Modelos de I+D+i</h3>
+                        <p class="font-sans text-dark/70 text-sm">Diseñamos y ejecutamos modelos de negocio comerciales
+                            y proyectos de innovación medibles.</p>
+                    </div>
+                    <div class="relative h-48 w-full mt-8" id="shuffler-container"></div>
+                </div>
+
+                <!-- Card 2: Telemetry Typewriter -->
+                <div class="feature-card bg-dark rounded-5xl p-8 shadow-xl flex flex-col h-[480px] text-white">
+                    <div class="mb-auto">
+                        <div
+                            class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6 text-accent">
+                            <i data-lucide="terminal" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-sans font-bold text-2xl mb-3">Capacidades Internas</h3>
+                        <p class="font-sans text-white/70 text-sm">Fortalecemos sus equipos de trabajo para competir de
+                            forma contundente en mercados dinámicos.</p>
+                    </div>
+                    <div
+                        class="bg-black/80 rounded-2xl p-6 mt-8 border border-white/10 overflow-hidden font-mono text-sm shadow-inner">
+                        <div class="flex items-center gap-2 mb-4 text-xs text-white/50 border-b border-white/10 pb-3">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                            </span>
+                            Live Feed: Rendimiento Analítico
+                        </div>
+                        <div id="typewriter-text" class="text-green-400 min-h-[80px] leading-relaxed"></div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cursor Protocol Scheduler -->
+                <div class="feature-card bg-primary rounded-5xl p-8 shadow-xl flex flex-col h-[480px] text-white">
+                    <div class="mb-auto">
+                        <div
+                            class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6 text-background">
+                            <i data-lucide="calendar-clock" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-sans font-bold text-2xl mb-3">Sostenibilidad</h3>
+                        <p class="font-sans text-white/70 text-sm">Alineamos sostenibilidad, cumplimiento normativo y
+                            productividad empresarial en el territorio.</p>
+                    </div>
+                    <div
+                        class="bg-white/5 rounded-2xl p-6 mt-8 border border-white/10 relative overflow-hidden backdrop-blur-sm">
+                        <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-mono text-white/50 mb-3">
+                            <div>L</div>
+                            <div>M</div>
+                            <div>M</div>
+                            <div>J</div>
+                            <div>V</div>
+                            <div>S</div>
+                            <div>D</div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1.5" id="scheduler-grid"></div>
+                        <div class="mt-4 flex justify-between items-center text-xs opacity-70">
+                            <span class="flex items-center gap-1"><span
+                                    class="w-2 h-2 rounded-full bg-accent inline-block"></span> Optimizado</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="w-2 h-2 rounded-full border border-white/30 inline-block"></span>
+                                Pendiente</span>
+                        </div>
+
+                        <!-- Animated Custom Cursor -->
+                        <div id="demo-cursor" class="absolute z-20 pointer-events-none drop-shadow-xl"
+                            style="top: 80%; left: -20%;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-accent"
+                                style="fill: currentColor; stroke: white; stroke-width: 1.5px;">
+                                <path d="M4 4l5.35 15.65 3.01-6.15 6.44-3.1L4 4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy: "The Manifesto" -->
+    <section id="proposito" class="relative py-40 overflow-hidden bg-dark text-white">
+        <!-- Parallax Background Texture -->
+        <div class="absolute inset-0 z-0 opacity-20 parallax-bg">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+                class="w-full h-full object-cover grayscale" alt="Abstract texture">
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div class="mb-12 philosophy-line">
+                <p class="font-mono text-white/50 text-sm md:text-base tracking-widest uppercase mb-4">La mayoría de la
+                    industria se enfoca en:</p>
+                <p class="font-sans text-2xl md:text-3xl font-medium text-white/80">entregables teóricos y consultoría
+                    genérica.</p>
+            </div>
+
+            <div class="h-px w-24 bg-accent/30 mx-auto my-16"></div>
+
+            <div class="philosophy-line">
+                <p class="font-mono text-accent text-sm md:text-base tracking-widest uppercase mb-6">Nosotros nos
+                    enfocamos en:</p>
+                <h2 class="font-sans text-4xl md:text-6xl lg:text-8xl font-bold leading-tight tracking-tight">
+                    transformación y <span class="font-drama italic text-accent font-normal block mt-2">resultados
+                        comprobados.</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protocol: "Sticky Stacking Archive" -->
+    <section id="metodo" class="bg-background relative py-20">
+        <div class="max-w-7xl mx-auto px-6 mb-16">
+            <h2 class="font-sans font-bold text-4xl md:text-5xl text-dark tracking-tight">Metodología <br><span
+                    class="font-drama italic text-primary">en tres fases.</span></h2>
+        </div>
+
+        <div class="protocol-container relative pb-[10vh]">
+            <!-- Card 1 -->
+            <div
+                class="protocol-card sticky top-24 w-[90%] md:w-[80vw] max-w-5xl mx-auto h-[60vh] md:h-[70vh] bg-white rounded-5xl border border-primary/10 shadow-xl overflow-hidden mb-24 flex flex-col md:flex-row origin-top">
+                <div class="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                    <span class="font-mono text-accent text-sm md:text-lg mb-6 block">01 // SISTEMAS DE
+                        INNOVACIÓN</span>
+                    <h3 class="font-sans font-bold text-3xl md:text-5xl text-dark mb-6 leading-tight">Vigilancia
+                        tecnológica y tendencias.</h3>
+                    <p class="font-sans text-dark/70 text-lg">Iniciamos con una inmersión profunda. Evaluamos el estado
+                        tecnológico, los recursos y estructuramos las soluciones con la realidad del mercado.</p>
+                </div>
+                <div
+                    class="w-full md:w-1/2 bg-primary/5 relative flex items-center justify-center min-h-[250px] overflow-hidden">
+                    <!-- Geometric Animation Canvas / Element -->
+                    <div
+                        class="w-64 h-64 border border-primary/20 rounded-full flex items-center justify-center relative spin-slow">
+                        <div
+                            class="w-48 h-48 border border-primary/40 rounded-full absolute border-dashed spin-slow-reverse">
+                        </div>
+                        <div class="w-32 h-32 border-2 border-accent rounded-full absolute"></div>
+                        <div class="w-16 h-16 bg-primary rounded-full absolute"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="protocol-card sticky top-32 w-[90%] md:w-[80vw] max-w-5xl mx-auto h-[60vh] md:h-[70vh] bg-primary rounded-5xl shadow-2xl overflow-hidden mb-24 flex flex-col md:flex-row text-white origin-top">
+                <div class="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                    <span class="font-mono text-accent text-sm md:text-lg mb-6 block">02 // DESARROLLO TÉCNICO</span>
+                    <h3 class="font-sans font-bold text-3xl md:text-5xl mb-6 leading-tight">Prototipos, MVPs y
+                        Validación.</h3>
+                    <p class="font-sans text-white/70 text-lg">Articulamos proyectos con universidades y centros de
+                        investigación. Diseñamos modelos financieros y validamos comercialmente el potencial.</p>
+                </div>
+                <div
+                    class="w-full md:w-1/2 bg-black/20 relative flex items-center justify-center min-h-[250px] overflow-hidden p-8">
+                    <!-- Scanner Animation Grid -->
+                    <div class="w-full h-full max-w-sm max-h-sm relative">
+                        <div class="grid grid-cols-8 gap-2 w-full h-full opacity-30">
+                            <!-- Array of dots generated by CSS/JS -->
+                            <div class="w-full h-full bg-white/20 rounded-full pb-[100%]"></div>
+                            <div class="w-full h-full bg-white/20 rounded-full pb-[100%]"></div>
+                            <div class="w-full h-full bg-white/20 rounded-full pb-[100%]"></div>
+                            <div class="col-span-8 h-full bg-transparent"></div>
+                            <div class="col-span-8 flex justify-between gap-2">
+                                <div class="w-full h-full bg-white/20 rounded-full pb-[100%]"></div>
+                                <div class="w-full h-full bg-white/20 rounded-full pb-[100%]"></div>
+                                <div class="w-full h-full bg-white/20 rounded-full pb-[100%]"></div>
+                                <div class="w-full h-full bg-white/20 rounded-full pb-[100%]"></div>
+                            </div>
+                        </div>
+                        <!-- Laser line -->
+                        <div
+                            class="absolute left-0 right-0 h-0.5 bg-accent shadow-[0_0_15px_rgba(204,88,51,1)] top-0 laser-scan z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="protocol-card sticky top-40 w-[90%] md:w-[80vw] max-w-5xl mx-auto h-[60vh] md:h-[70vh] bg-dark rounded-5xl shadow-2xl overflow-hidden flex flex-col md:flex-row text-white origin-top border border-white/5">
+                <div class="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                    <span class="font-mono text-accent text-sm md:text-lg mb-6 block">03 // CUMPLIMIENTO Y
+                        GESTIÓN</span>
+                    <h3 class="font-sans font-bold text-3xl md:text-5xl mb-6 leading-tight">Auditoría, ISO y
+                        Escalabilidad.</h3>
+                    <p class="font-sans text-white/70 text-lg">Implementamos Sistemas Integrados (ISO 14001, 9001,
+                        45001). Aseguramos la mejora continua, cumplimiento normativo y la mitigación de riesgos.</p>
+                </div>
+                <div
+                    class="w-full md:w-1/2 bg-white/5 relative flex items-center justify-center min-h-[250px] overflow-hidden">
+                    <!-- Waveform Animation -->
+                    <svg class="w-full h-32 text-accent waveform-svg" preserveAspectRatio="none" viewBox="0 0 1000 100"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M0,50 L200,50 L250,20 L300,80 L350,50 L1000,50" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Membership -->
+    <section id="reserva" class="bg-background py-32 px-6">
+        <div
+            class="max-w-4xl mx-auto bg-white rounded-[3rem] p-12 md:p-20 shadow-xl border border-primary/10 text-center relative overflow-hidden">
+            <!-- Decorative blur -->
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+            </div>
+
+            <div
+                class="relative z-10 w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center mb-8 shadow-lg">
+                <i data-lucide="phone-call" class="w-8 h-8"></i>
+            </div>
+
+            <h2 class="font-sans font-bold text-4xl md:text-6xl text-dark mb-6 tracking-tight">Estructuremos su
+                <br><span class="font-drama italic text-primary">siguiente paso.</span></h2>
+            <p class="font-sans text-lg text-dark/70 max-w-2xl mx-auto mb-12">
+                Agende una consultoría gratuita para discutir los requerimientos de su negocio y entender a profundidad
+                cómo nuestra experiencia de 30 años puede impulsar su organización.
+            </p>
+
+            <!-- Link to Calendar -->
+            <a href="https://cal.com/jesus-cortes" target="_blank" rel="noopener noreferrer"
+                class="magnetic-btn group relative overflow-hidden rounded-full bg-accent px-10 py-5 text-lg font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 w-full md:w-auto justify-center">
+                <span class="relative z-10 flex items-center gap-2">Agendar Llamada Directa <i data-lucide="calendar"
+                        class="w-5 h-5"></i></span>
+                <div
+                    class="absolute inset-0 z-0 bg-primary scale-y-0 transition-transform duration-500 ease-in-out group-hover:scale-y-100 origin-top">
+                </div>
+            </a>
+            <p class="mt-6 text-sm font-mono text-dark/50">Disponible via videollamada. Sin compromiso.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111613] text-white pt-24 pb-8 px-6 md:px-16 rounded-t-[4rem] relative overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-16 mb-8 relative z-10">
+            <div class="md:col-span-2">
+                <h3 class="font-sans font-bold text-3xl mb-4 text-white">Renglón 41</h3>
+                <p class="font-sans text-white/60 max-w-sm mb-8 leading-relaxed">
+                    Convertimos la estrategia y la innovación en resultados reales. Operando desde Mosquera,
+                    Cundinamarca - Colombia.
+                </p>
+                <div class="flex items-center gap-3 bg-white/5 rounded-full px-4 py-2 w-max border border-white/10">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
+                    </span>
+                    <span class="font-mono text-xs tracking-widest text-green-400 uppercase">Sistema Operativo</span>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-sans font-bold text-lg mb-6 text-white tracking-wide">Directores</h4>
+                <ul class="space-y-6">
+                    <li>
+                        <p class="font-sans font-medium text-white/90">Jesús Alfonso Cortés Baquero</p>
+                        <p class="font-sans text-white/50 text-sm mt-1">Estrategia, Innovación, I+D+i</p>
+                        <a href="mailto:jesus.cortes@renglon41.com"
+                            class="font-mono text-accent text-xs mt-2 inline-block hover:underline">jesus.cortes@renglon41.com</a>
+                    </li>
+                    <li>
+                        <p class="font-sans font-medium text-white/90">Yada L. Torres Cabarcas</p>
+                        <p class="font-sans text-white/50 text-sm mt-1">Sistemas Integrados de Gestión</p>
+                        <a href="mailto:yada.torres@renglon41.com"
+                            class="font-mono text-accent text-xs mt-2 inline-block hover:underline">yada.torres@renglon41.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-sans font-bold text-lg mb-6 text-white tracking-wide">Navegación</h4>
+                <ul class="space-y-3 font-sans text-white/60">
+                    <li><a href="#" class="hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="#proposito" class="hover:text-white transition-colors">Propósito</a></li>
+                    <li><a href="#servicios" class="hover:text-white transition-colors">Portafolio</a></li>
+                    <li><a href="#metodo" class="hover:text-white transition-colors">Metodología</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-mono text-white/30 relative z-10">
+            <p>&copy; 2026 Corporación Renglón 41. Todos los derechos reservados.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Wait for GSAP before loading custom logic -->
+    <script src="main.js"></script>
+</body>
+
+</html>

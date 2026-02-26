@@ -1,0 +1,70 @@
+/* Base styles and custom utilities */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar formatting */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F2F0E9; 
+}
+::-webkit-scrollbar-thumb {
+    background: #2E4036; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #1A1A1A; 
+}
+
+/* Navbar Scrolled State */
+.nav-scrolled {
+    background-color: rgba(242, 240, 233, 0.8) !important;
+    backdrop-filter: blur(16px);
+    color: #1A1A1A !important;
+    border: 1px solid rgba(46, 64, 54, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.nav-scrolled .nav-link {
+    color: #1A1A1A;
+}
+
+/* Typewriter Cursor */
+.animate-pulse-fast {
+    animation: pulse 0.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Ensure smooth magnetic button transitions */
+.magnetic-btn {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-btn:hover {
+    transform: scale(1.03);
+}
+
+.magnetic-btn span {
+    transition: color 0.3s ease;
+}
+
+.magnetic-btn:hover span {
+    color: white !important;
+}
+
+/* Protocol Stacking Cards Base CSS */
+.protocol-card {
+    will-change: transform, opacity, filter;
+}
+
+.shuffler-card {
+    will-change: transform, opacity, z-index;
+}
